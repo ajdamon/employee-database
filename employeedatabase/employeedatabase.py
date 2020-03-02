@@ -45,11 +45,11 @@ def startProgram(nameList, numberList, deptList, titleList, employeeNumCounter, 
 #Function to input employee name.
 def inputName(nameList, numberList, deptList, titleList, employeeNumCounter):
     employeeName = input('Please enter an employee name or type "exit": ')
-    #If user types "exit"
     if employeeName == 'exit' or employeeName == '"exit"':
+        #Do not count as new employee.
         del employeeName
-        #delete the string.
-        print()       
+        print() 
+        #Input is finalized. Now display information.      
         printContents(nameList, numberList, deptList, titleList, employeeNumCounter)
         #End program
         sys.exit(0)
